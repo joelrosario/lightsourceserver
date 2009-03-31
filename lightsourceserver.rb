@@ -1,4 +1,3 @@
-puts "rubygems"
 require 'rubygems'
 
 require 'rack'
@@ -6,7 +5,7 @@ require 'thin'
 #require 'webrick'
 #require 'rack/handler/webrick'
 
-require 'lightsourceserver_http_handler'
+require File.dirname(__FILE__) + '/lightsourceserver_http_handler.rb'
 
 class LightSourceServerRackAdapter
 	def initialize(router)
